@@ -92,3 +92,11 @@ type Query must be define in root resolver and schema
 
 ## add mutation to schema.graphql
 
+# Mocking our GraphQL API
+
+reference: https://www.apollographql.com/docs/apollo-server/testing/mocking/
+
+```sh
+pnpm add --save-dev @graphql-tools/mock @graphql-tools/schema
+```
+

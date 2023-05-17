@@ -7,7 +7,10 @@ import { json } from "body-parser";
 import { gql } from "@apollo/client/core";
 import { IResolvers } from "@graphql-tools/utils";
 
-import schema from "./graphql/schema";
+import { addMocksToSchema } from "@graphql-tools/mock";
+import { makeExecutableSchema } from "@graphql-tools/schema";
+
+import appSchema from "./graphql/schema";
 
 const PORT = 8080;
 const app: Application = express();
@@ -16,7 +19,13 @@ async function startApolloServer() {
   const PORT = 8080;
   const app: Application = express();
 
-  const server: ApolloServer = new ApolloServer({ schema });
+  const server: ApolloServer = new ApolloServer({
+    // addMocksToSchema accepts a schema instance and provides
+    // mocked data for each field in the schema
+    schema: addMocksToSchema({
+      schema: appSchema,
+    }),
+  });
 
   await server.start();
   server.assertStarted("expressMiddleware()");
