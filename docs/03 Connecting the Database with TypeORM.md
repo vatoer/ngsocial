@@ -26,3 +26,20 @@ touch User.ts && touch Post.ts && touch Comment.ts && touch Like.ts && touch Not
 ```
 
 # build certain relationships between the entities
+
+# Seeding test data
+
+```sh
+pnpm add typeorm-seeding
+
+Issues with peer dependencies found
+.
+└─┬ typeorm-seeding 1.6.1
+  └── ✕ unmet peer typeorm@^0.2.24: found 0.3.16
+```
+
+```sh
+pnpm add -D faker
+cd src/database 
+
+```
