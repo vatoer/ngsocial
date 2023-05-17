@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "ts-node ./src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "ngopas (https://youtube.com/@ngopas)",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.1.7",
+    "express": "^4.18.2",
+    "save-dev": "0.0.1-security"
   },
   "devDependencies": {
     "ts-node": "^10.9.1",

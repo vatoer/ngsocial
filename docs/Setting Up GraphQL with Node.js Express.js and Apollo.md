@@ -46,3 +46,10 @@ commit the change
 ```sh
 git add -A
 git commit -m "Installing Express and development dependencies"
+```
+
+# Creating the server
+
+```sh
+mkdir src && touch src/index.ts
+```
