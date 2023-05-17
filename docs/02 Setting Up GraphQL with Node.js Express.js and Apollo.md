@@ -80,9 +80,7 @@ pnpm add @types/body-parser @types/cors --save-dev
 
 ```sh
 cd src && mkdir graphql 
-cd graphql && touch schema.ts && touch schema.graphql &&
-touch resolvers.ts 
-
+cd graphql && touch schema.ts && touch schema.graphql && touch resolvers.ts 
 ```
 
 ## creating type User, Post, Comment, Like, Notification
@@ -110,3 +108,9 @@ contoh json body request
   }
 }
 ```
+
+# Mocking our GraphQL API with more realistic and random values
+
+```sh
+ pnpm install casual
+ ```

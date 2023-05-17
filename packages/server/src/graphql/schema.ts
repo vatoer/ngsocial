@@ -1,7 +1,7 @@
 import fs from "fs";
 import { GraphQLSchema } from "graphql";
 import { makeExecutableSchema } from "@graphql-tools/schema";
-import { gql } from "@apollo/client/core";
+import { gql } from "graphql-tag";
 import resolvers from "./resolvers";
 
 const typeDefs = gql`
