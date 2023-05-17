@@ -59,3 +59,15 @@ mkdir src && touch src/index.ts
 ```sh
 pnpm add --save-dev ts-node-dev
 ```
+
+# Creating a GraphQL API
+
+## Installing the necessary libraries
+
+```sh 
+cd packages/server
+pnpm add graphql @apollo/server @graphql-tools/utils @graphql-tools/schema
+pnpm add install --save-dev graphql-tag
+```
+
+
