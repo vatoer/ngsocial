@@ -84,3 +84,9 @@ cd graphql && touch schema.ts && touch schema.graphql &&
 touch resolvers.ts 
 
 ```
+
+## creating type User, Post, Comment, Like, Notification
+type Query must be define in root resolver and schema
+
+## add queries to schema
+
