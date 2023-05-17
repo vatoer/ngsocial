@@ -99,4 +99,14 @@ reference: https://www.apollographql.com/docs/apollo-server/testing/mocking/
 ```sh
 pnpm add --save-dev @graphql-tools/mock @graphql-tools/schema
 ```
+contoh json body request
 
+```json
+{
+  "query": "query MockSearchUserAndPost($searchQuery: String, $userId: ID!) { searchUsers(searchQuery: $searchQuery) { id fullName email postsCount } getPostsByUserId(userId: $userId) { id text author { id fullName } commentsCount latestComment { Comment } }}",
+  "variables": {
+    "searchQuery": "a",
+    "userId": "12ce6c8b-be2f-4e1a-b47d-4a4214be221d"
+  }
+}
+```

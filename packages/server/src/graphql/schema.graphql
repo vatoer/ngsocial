@@ -47,7 +47,7 @@ type Post {
 
 type Comment {
   id: ID!
-  Comment: String!
+  comment: String!
   Author: User!
   post: ID!
   createdAt: String!
