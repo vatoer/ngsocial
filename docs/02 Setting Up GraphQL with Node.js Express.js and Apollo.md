@@ -53,3 +53,9 @@ git commit -m "Installing Express and development dependencies"
 ```sh
 mkdir src && touch src/index.ts
 ```
+
+# Watching and recompiling our code
+
+```sh
+pnpm add --save-dev ts-node-dev
+```
