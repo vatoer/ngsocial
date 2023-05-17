@@ -43,6 +43,7 @@ cd src/database
 mkdir factories
 touch user.factory.ts && touch post.factory.ts && 
 touch comment.factory.ts && touch like.factory.ts && touch notification.factory.ts
+```
 
 # Seeding test data
 
@@ -50,3 +51,17 @@ reference :
 
 https://hashnode.devist.xyz/how-to-seed-a-database-with-typeorm-and-faker-in-2023
 https://typeorm-extension.tada5hi.net/guide/seeding.html
+
+# Using Apollo with TypeORM
+
+Create A new graphql-types package
+
+```sh
+lerna create graphql-types
+```
+
+# Install GraphQL Codegen and the required plugins
+
+```sh
+pnpm install @graphql-codegen/cli @graphql-codegen/typescript @graphql-codegen/typescript-resolvers
+```
