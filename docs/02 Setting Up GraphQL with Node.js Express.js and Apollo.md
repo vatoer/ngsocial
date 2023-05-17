@@ -88,5 +88,7 @@ touch resolvers.ts
 ## creating type User, Post, Comment, Like, Notification
 type Query must be define in root resolver and schema
 
-## add queries to schema
+## add queries to schema.graphql
+
+## add mutation to schema.graphql
 

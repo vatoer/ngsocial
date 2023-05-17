@@ -9,6 +9,16 @@ type Query {
   searchUsers(searchQuery: String): [User]
 }
 
+type Mutation {
+  post(text: String, image: String): Post
+  removePost(id: ID!): ID
+  comment(comment: String!, postId: ID!): Comment
+  removeComment(id: ID!): Comment
+  like(postId: ID!): Like
+  removeLike(postId: ID!): Like
+  removeNotification(id: ID!): ID
+}
+
 type User {
   id: ID!
   fullName: String!
