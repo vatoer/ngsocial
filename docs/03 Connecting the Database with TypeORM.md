@@ -30,16 +30,23 @@ touch User.ts && touch Post.ts && touch Comment.ts && touch Like.ts && touch Not
 # Seeding test data
 
 ```sh
-pnpm add typeorm-seeding
+pnpm install typeorm-extension --save
+pnpm add typeorm-extension @faker-js/faker
 
-Issues with peer dependencies found
-.
-└─┬ typeorm-seeding 1.6.1
-  └── ✕ unmet peer typeorm@^0.2.24: found 0.3.16
+
 ```
+
+# create factories for entities
 
 ```sh
-pnpm add -D faker
 cd src/database 
+mkdir factories
+touch user.factory.ts && touch post.factory.ts && 
+touch comment.factory.ts && touch like.factory.ts && touch notification.factory.ts
 
-```
+# Seeding test data
+
+reference : 
+
+https://hashnode.devist.xyz/how-to-seed-a-database-with-typeorm-and-faker-in-2023
+https://typeorm-extension.tada5hi.net/guide/seeding.html
