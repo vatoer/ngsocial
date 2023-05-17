@@ -1,3 +1,51 @@
 type Query {
- message: String!
+  message: String!
+}
+
+type User {
+  id: ID!
+  fullName: String!
+  bio: String
+  email: String!
+  username: String!
+  password: String!
+  image: String
+  coverImage: String
+  postsCount: Int!
+  createdAt: String!
+}
+
+type Post {
+  id: ID!
+  text: String
+  image: String
+  author: User!
+  commentsCount: Int!
+  likesCount: Int!
+  likedByAuthUser: Boolean
+  latestComment: Comment
+  latestLike: String
+  createdAt: String!
+}
+
+type Comment {
+  id: ID!
+  Comment: String!
+  Author: User!
+  post: ID!
+  createdAt: String!
+}
+
+type Like {
+  id: ID!
+  user: User!
+  post: ID!
+  createdAt: String!
+}
+
+type Notification {
+  id: ID!
+  text: String!
+  postId: ID!
+  createdAt: String!
 }
