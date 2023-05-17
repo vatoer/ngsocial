@@ -1,0 +1,26 @@
+module.exports = {
+  development: {
+    type: "mysql",
+    username: "dbuser",
+    password: "p4ssw0rd",
+    database: "socialdb",
+    host: "127.0.0.1",
+    synchronize: true,
+    logging: false,
+    entities: ["src/entity/**/*.ts"],
+    migrations: ["src/migration/**/*.ts"],
+    subscribers: ["src/subscriber/**/*.ts"],
+  },
+  production: {
+    type: "mysql",
+    username: process.env.username,
+    password: process.env.password,
+    database: process.env.database,
+    host: process.env.host,
+    synchronize: true,
+    logging: false,
+    entities: ["src/entity/**/*.ts"],
+    migrations: ["src/migration/**/*.ts"],
+    subscribers: ["src/subscriber/**/*.ts"],
+  },
+};
