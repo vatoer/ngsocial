@@ -15,3 +15,13 @@ create database socialdb;
 cd ngsocial/packages/server/
 pnpm install typeorm reflect-metadata mysql
 ```
+
+# Creating TypeORM entities
+
+```sh
+cd ngsocial/packages/server/
+mkdir src/entity
+cd src/entity
+touch User.ts && touch Post.ts && touch Comment.ts && touch Like.ts && touch Notification.ts
+```
+
