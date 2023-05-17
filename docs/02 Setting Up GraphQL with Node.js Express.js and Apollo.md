@@ -68,6 +68,11 @@ pnpm add --save-dev ts-node-dev
 cd packages/server
 pnpm add graphql @apollo/server @graphql-tools/utils @graphql-tools/schema
 pnpm add install --save-dev graphql-tag
+pnpm add @apollo/client
+pnpm add cors body-parser
+pnpm add @types/body-parser @types/cors --save-dev
+
 ```
 
+# Exposing a simple GraphQL API
 
