@@ -116,3 +116,9 @@ contoh json body request
  ```
 
 # Linking the mocked data
+
+
+# Configuring CORS
+```sh
+pnpm  install cors
+```

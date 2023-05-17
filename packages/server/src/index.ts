@@ -69,6 +69,7 @@ const mocks = {
 
 const PORT = 8080;
 const app: Application = express();
+app.use(cors());
 
 async function startApolloServer() {
   const PORT = 8080;
