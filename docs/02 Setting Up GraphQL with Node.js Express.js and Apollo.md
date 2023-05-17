@@ -76,3 +76,11 @@ pnpm add @types/body-parser @types/cors --save-dev
 
 # Exposing a simple GraphQL API
 
+# Creating a GraphQL schema for our social network
+
+```sh
+cd src && mkdir graphql 
+cd graphql && touch schema.ts && touch schema.graphql &&
+touch resolvers.ts 
+
+```
