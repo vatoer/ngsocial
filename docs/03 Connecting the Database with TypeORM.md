@@ -25,3 +25,4 @@ cd src/entity
 touch User.ts && touch Post.ts && touch Comment.ts && touch Like.ts && touch Notification.ts
 ```
 
+# build certain relationships between the entities
