@@ -65,3 +65,36 @@ lerna create graphql-types
 ```sh
 pnpm install @graphql-codegen/cli @graphql-codegen/typescript @graphql-codegen/typescript-resolvers
 ```
+
+# generate graphql-types
+
+generating Type save for resolver
+
+```sh
+npm run codegen
+```
+
+generated scalars ID will be string 
+to custom this define 
+
+schema.graphql
+```graphql
+scalars scalar ID
+....
+
+```
+
+add `config` to configuration `codegen.yml`
+
+```yml
+schema: './packages/server/src/graphql/schema.graphql'
+generates:
+  ./packages/graphql-types/src/resolvers-types.ts:
+    plugins:
+      - typescript
+      - typescript-resolvers
+    config:
+      scalars:
+        ID: number
+
+```
