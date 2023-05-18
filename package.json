@@ -5,6 +5,9 @@
     "packages/*"
   ],
   "version": "0.0.1",
+  "scripts": {
+    "codegen": "npx graphql-codegen --watch"
+    },
   "devDependencies": {
     "lerna": "^6.6.2"
   },
