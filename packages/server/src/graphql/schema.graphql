@@ -1,3 +1,5 @@
+scalar ID
+
 type Query {
   message: String!
   getUser(userId: ID!): User
