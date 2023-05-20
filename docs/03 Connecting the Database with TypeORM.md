@@ -98,3 +98,5 @@ generates:
         ID: number
 
 ```
+
+# add mutation query

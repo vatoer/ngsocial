@@ -1,0 +1,84 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "graphql-angular-ngsocial",
+    "dateExported": "2023-05-19T09:22:58.506Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "eacf8f59-8e98-4ccb-b844-c7e8cb838502",
+            "name": "ch02",
+            "containerId": "",
+            "created": "2023-04-15T09:07:17.771Z",
+            "sortNum": 10000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "cd36c1fb-fdac-4f36-b8d8-1868c7b44a66",
+            "colId": "0c058d1d-54ed-45b1-88e0-47b17a8863b0",
+            "containerId": "eacf8f59-8e98-4ccb-b844-c7e8cb838502",
+            "name": "1st req",
+            "url": "http://127.0.0.1:8080/graphql",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-04-15T09:07:46.819Z",
+            "modified": "2023-04-15T11:03:31.335Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "graphql",
+                "raw": "",
+                "form": [],
+                "graphql": {
+                    "query": "query Query {\n  message\n}"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "ee0d016b-de4f-43f2-8d74-bc525a05ad83",
+            "colId": "0c058d1d-54ed-45b1-88e0-47b17a8863b0",
+            "containerId": "eacf8f59-8e98-4ccb-b844-c7e8cb838502",
+            "name": "mock searchUsers",
+            "url": "http://127.0.0.1:8080/graphql",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-04-15T10:28:50.489Z",
+            "modified": "2023-05-17T10:19:52.057Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "graphql",
+                "raw": "",
+                "form": [],
+                "graphql": {
+                    "query": "query MockSearchUserAndPost($searchQuery: String, $userId: ID!) {\n  searchUsers(searchQuery: $searchQuery) {\n    id\n    fullName\n    email\n    postsCount\n  }\n  getPostsByUserId(userId: $userId) {\n    id\n    text\n    author {\n      id\n      fullName\n    }\n    commentsCount\n    latestComment {\n      Comment\n    }\n  }\n}",
+                    "variables": "{\n  \"searchQuery\": \"a\",\n  \"userId\": \"12ce6c8b-be2f-4e1a-b47d-4a4214be221d\"\n}"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "eea16da9-2533-4632-9338-7f0681fd5de8",
+            "colId": "0c058d1d-54ed-45b1-88e0-47b17a8863b0",
+            "containerId": "eacf8f59-8e98-4ccb-b844-c7e8cb838502",
+            "name": "mock with linked data",
+            "url": "http://127.0.0.1:8080/graphql",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-04-15T10:59:43.812Z",
+            "modified": "2023-05-17T15:30:25.269Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "graphql",
+                "raw": "",
+                "form": [],
+                "graphql": {
+                    "query": "{\n  searchUsers {\n    id\n  }\n  getPostsByUserId(userId: \"54a776e8-2ff3-4c24-984b-4fb79a1a3eeb\") {\n    id\n    author\n  }\n  getCommentsByPostId(postId: \"93c9c019\") {\n    id\n    author\n    post\n  }\n  getLikesByPostId(postId: \"93c9c019\") {\n    id\n    user\n    post\n  }\n}"
+                }
+            },
+            "tests": []
+        }
+    ]
+}
